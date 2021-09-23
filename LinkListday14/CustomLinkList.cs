@@ -8,33 +8,19 @@ namespace LinkListday14
 {
     class CustomLinkList
     {
+        //UC2
+        /// <summary>
+        /// UC2 insert at front
+        /// </summary>
+        /// <param name="new_data"></param>
+
         public Node head;
-        ///</summary>
-        ///UC1 insert at last
-        ///</summary>
-        ///<param  name= "New data" ></param>
-        public void InsertLast(int new_data)
+        public void InsertFront(int new_data)
         {
-            Node new_node = new Node(new_data);
-            if (this.head == null)
-            {
-                this.head = new_node;
-            }
-            else
-            {
-                Node lastNode = GetLastNode();
-                lastNode.next = new_node;
-            }
-            Console.WriteLine("inserted into list:" + new_node.data);
-        }
-        public Node GetLastNode()
-        {
-            Node temp = this.head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
-            }
-            return temp;
+            Node new_Node = new Node(new_data);
+            new_Node.next = this.head;
+            this.head = new_Node;
+            Console.WriteLine("Inserted into list" + new_Node.data);
         }
     }
 }

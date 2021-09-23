@@ -11,10 +11,10 @@ namespace LinkListday14
         public static void Main(string[] args)
         {
             CustomLinkList customLinkList = new CustomLinkList();
-            //UC1 insertLast
-            customLinkList.InsertLast(56);
-            customLinkList.InsertLast(30);
-            customLinkList.InsertLast(70);
+            //UC2 insert front
+            customLinkList.InsertFront(70);
+            customLinkList.InsertFront(30);
+            customLinkList.InsertFront(56);
             Console.ReadLine();
         }
     }
