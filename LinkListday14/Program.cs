@@ -11,10 +11,14 @@ namespace LinkListday14
         public static void Main(string[] args)
         {
             CustomLinkList customLinkList = new CustomLinkList();
-            //UC3 Append
-            customLinkList.Append(56);
-            customLinkList.Append(30);
-            customLinkList.Append(70);
+            //UC5 deleting 1st element
+
+            customLinkList.InsertLast(56);
+            customLinkList.InsertLast(30);
+            customLinkList.InsertLast(70);
+            customLinkList.Display();
+            Console.WriteLine("Deleted node is:" + customLinkList.DeleteFirstNode());
+            customLinkList.Display();
             Console.ReadLine();
         }
     }
